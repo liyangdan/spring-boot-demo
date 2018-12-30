@@ -1,4 +1,4 @@
-package cn.edu.hdu.demoweb;
+package cn.edu.hdu.demoweb.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -9,12 +9,12 @@ import org.springframework.web.bind.annotation.RestController;
  * @date 2018/12/30 6:55 PM
  */
 @RestController
-@RequestMapping("/demo2")
+@RequestMapping("/demo1")
 public class ControllerTest {
 
-    @RequestMapping(value = "/create2")
+    @RequestMapping(value = "/create1")
     public void testCreate(){
-        System.out.println("my spring boot test is successful");
+        System.out.println("my spring boot test is successful test1");
     }
 
 }

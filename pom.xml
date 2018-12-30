@@ -20,7 +20,6 @@
         <module>demo-boot</module>
         <module>demo-web</module>
         <module>demo-services</module>
-        <module>demo-web-test</module>
     </modules>
 
     <properties>
