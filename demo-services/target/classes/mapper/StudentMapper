@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.edu.hdu.dao.StudentDao">
+
+    <resultMap id="StudentMap" type="cn.edu.hdu.services.model.Student">
+        <id column="sid" property="sid"/>
+        <result column="name" property="name"/>
+        <result column="age" property="age"/>
+        <result column="servelt" property="servelt"/>
+        <result column="jsp" property="jsp"/>
+        <result column="sgender" property="sgender"/>
+        <result column="classname" property="classname"/>
+    </resultMap>
+
+    <sql id="tb">
+        student
+    </sql>
+    <sql id="cols_all">
+        id, name,age, servelt,jsp,sgender,classname/>
+    </sql>
+
+
+    <select id="selectBySid" parameterType="java.lang.Integer" resultMap="cn.edu.hdu.services.model.Student">
+        SELECT <include refid="cols_all" />
+        FROM <include refid="tb" />
+        WHERE sid = #{sid}  LIMIT 1
+    </select>
+
+
+</mapper>
